@@ -1,7 +1,10 @@
 from flask import Flask, render_template
 from flask import request
+from flask_bootstrap import Bootstrap
 
 app = Flask(__name__)
+
+bootstrap = Bootstrap(app)
 
 @app.route('/')
 def index():
@@ -13,5 +16,5 @@ def index():
 def user(name):
     return '<h1>Hello, %s!</h1>' %name
 
-if __name__ == '__main__':
-    app.run(debug=True)
+# if __name__ == '__main__':
+#     app.run(debug=True)s
