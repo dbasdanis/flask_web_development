@@ -7,6 +7,7 @@ from wtforms import StringField, SubmitField
 from wtforms.validators import DataRequired
 
 app = Flask(__name__)
+app.config['SECRET_KEY'] = 'SECRET_KEY'
 
 bootstrap = Bootstrap(app)
 moment = Moment(app)
