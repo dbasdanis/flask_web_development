@@ -16,7 +16,7 @@ class NameForm(FlaskForm):
     name = StringField('What is your name?', validators=[DataRequired()])
     submit = SubmitField('Submit')
 
-@app.route('/')
+@app.route('/', methods=['GET', 'POST'])
 def index():
     name = None
     form = NameForm()
